@@ -124,7 +124,6 @@ class DecodeRunnerWithPolarization:
                 D_dist[pattern_id, 0, :] += self.Mat[pattern_id, sky_i, :] * d_Htype
                 D_dist[pattern_id, 1, :] += self.Mat[pattern_id, sky_i, :] * d_Vtype
         norm = np.sum(D_dist)
-        print(norm)
         D_dist /= norm
         return D_dist
 
@@ -223,7 +222,7 @@ class DecodeRunnerWithPolarization:
             self.save_sky_parameters(filename_Vtype, S_dist_90)
             self.save_divergence_trend("./parameters/{}/div_trend.txt".format(dirname), div_trend)
 
-            subprocess.run(["/Users/watanabe/work/Coded_aperture/cpp/draw_decoded_image_polarization", filename_Htype, filename_Vtype, outfilename_I, outfilename_P, str(self.Nsx), str(self.Nsy), str(self.sky_pitch), str(1.0)])
+            subprocess.run(["../cpp/draw_decoded_image_polarization", filename_Htype, filename_Vtype, outfilename_I, outfilename_P, str(self.Nsx), str(self.Nsy), str(self.sky_pitch), str(1.0)])
             loop_id += 1
         
         print("end.")
