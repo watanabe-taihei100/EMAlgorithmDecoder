@@ -190,7 +190,7 @@ class DecodeRunner:
             self.save_divergence_trend("./parameters/{}/div_trend.txt".format(dirname), div_trend)
             # if div < finish_delta:
                 # break
-            subprocess.run(["/Users/watanabe/work/Coded_aperture/cpp/draw_decoded_image", filename_sky_parameters, filename_sky_image, str(self.Nsx), str(self.Nsy), str(self.sky_pitch)])
+            subprocess.run(["../cpp/draw_decoded_image", filename_sky_parameters, filename_sky_image, str(self.Nsx), str(self.Nsy), str(self.sky_pitch)])
             loop_id += 1
         
         print("end.")

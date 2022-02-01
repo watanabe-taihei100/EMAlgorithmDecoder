@@ -1,0 +1,7 @@
+cpp/
+!cpp/*.cc
+
+main/__pycache__
+
+test/parameters/*
+test/pictures/*

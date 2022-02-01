@@ -1,4 +1,6 @@
-from .. import EMdecoderSimple
+import sys
+sys.path.append("../main")
+import EMdecoderSimple
 
 num_patterns = 8
 attenuation = 0.02

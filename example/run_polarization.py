@@ -1,4 +1,4 @@
-from .. import EMdecoderPolarization
+from ..main import EMdecoderPolarization
 import json
 
 num_patterns = 8
